@@ -1,0 +1,183 @@
+---
+// Works Carousel Section
+const projects = [
+  {
+    id: 1,
+    title: 'Halo Digital Agency website',
+    category: 'Web Design',
+    image: '/project-1.png',
+    tag: 'UI/UX',
+  },
+  {
+    id: 2,
+    title: 'Brand Identity System',
+    category: 'Branding',
+    image: '/project-2.png',
+    tag: 'Branding',
+  },
+  {
+    id: 3,
+    title: 'Mobile App Design',
+    category: 'Product Design',
+    image: '/project-3.png',
+    tag: 'Product',
+  },
+  {
+    id: 4,
+    title: 'E-commerce Redesign',
+    category: 'Web Design',
+    image: '/project-1.png',
+    tag: 'UI/UX',
+  },
+];
+---
+
+<section id="works" class="section-py bg-[var(--color-tertiary)]">
+  <div class="container-custom">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <span
+          class="inline-block text-xs font-semibold tracking-widest text-[var(--color-secondary)] uppercase mb-3"
+          >Portfolio</span
+        >
+        <h2
+          class="text-3xl md:text-5xl font-bold text-[var(--color-primary)] leading-tight"
+        >
+          Latest Works
+        </h2>
+      </div>
+      <div class="flex items-center gap-3">
+        <button
+          id="carousel-prev"
+          class="w-12 h-12 rounded-full border border-[var(--color-primary)] flex items-center justify-center hover:bg-[var(--color-primary)] hover:text-white transition-all duration-200 group"
+          aria-label="Previous"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M19 12H5M5 12l7 7M5 12l7-7"></path>
+          </svg>
+        </button>
+        <button
+          id="carousel-next"
+          class="w-12 h-12 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center hover:bg-[#444] transition-all duration-200"
+          aria-label="Next"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M5 12h14M13 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="relative overflow-hidden">
+      <div
+        id="carousel-track"
+        class="flex gap-6 transition-transform duration-500 ease-out"
+        style="will-change: transform;"
+      >
+        {
+          projects.map((project) => (
+            <div class="flex-none w-[280px] md:w-[380px] lg:w-[440px] group cursor-pointer">
+              <div class="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-200">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                  <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between">
+                <div>
+                  <p class="font-semibold text-[var(--color-primary)] text-sm">
+                    {project.title}
+                  </p>
+                  <p class="text-xs text-[var(--color-secondary)] mt-0.5">
+                    {project.category}
+                  </p>
+                </div>
+                <span class="text-xs font-medium px-3 py-1 rounded-full bg-[var(--color-primary)] text-white">
+                  {project.tag}
+                </span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- View All -->
+    <div class="mt-10 text-center">
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] border-b border-[var(--color-primary)] pb-0.5 hover:gap-4 transition-all duration-200"
+      >
+        View More
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path d="M5 12h14M13 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('carousel-track') as HTMLElement;
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+
+  let currentIndex = 0;
+  const getCardWidth = () => {
+    const card = track?.children[0] as HTMLElement;
+    if (!card) return 0;
+    return card.offsetWidth + 24; // gap-6 = 24px
+  };
+
+  const getMaxIndex = () => {
+    if (!track) return 0;
+    return track.children.length - 1;
+  };
+
+  const scrollTo = (index: number) => {
+    if (!track) return;
+    currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
+    track.style.transform = `translateX(-${currentIndex * getCardWidth()}px)`;
+  };
+
+  prevBtn?.addEventListener('click', () => scrollTo(currentIndex - 1));
+  nextBtn?.addEventListener('click', () => scrollTo(currentIndex + 1));
+</script>

@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import AboutMe from '../components/AboutMe.astro';
+import WorksCarousel from '../components/WorksCarousel.astro';
+import Experience from '../components/Experience.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Blog from '../components/Blog.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Your Name — UI/UX Designer & Creative Director"
+  description="Personal portfolio of Your Name — a UI/UX designer specializing in digital experiences, branding, and product design."
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <AboutMe />
+    <WorksCarousel />
+    <Experience />
+    <CTABanner />
+    <Blog />
+    <ContactCTA />
+  </main>
+  <Footer />
+</Layout>

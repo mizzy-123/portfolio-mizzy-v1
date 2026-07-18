@@ -1,0 +1,109 @@
+---
+// Blog / Insights Section
+const posts = [
+  {
+    id: 1,
+    category: 'Design',
+    readTime: '5 min read',
+    title: 'Conducting in-depth research and usability testing',
+    excerpt:
+      'Explore how research-driven design decisions create products that truly resonate with users and drive meaningful engagement.',
+    image: '/blog-1.png',
+    color: 'bg-orange-100 text-orange-700',
+  },
+  {
+    id: 2,
+    category: 'Strategy',
+    readTime: '8 min read',
+    title: 'Designing cohesive strategies and visualizations',
+    excerpt:
+      'A deep dive into building brand systems that communicate clarity, purpose, and elegance across every touchpoint.',
+    image: '/blog-2.png',
+    color: 'bg-teal-100 text-teal-700',
+  },
+  {
+    id: 3,
+    category: 'Process',
+    readTime: '6 min read',
+    title: 'Providing expert service and strategic guidance',
+    excerpt:
+      'How a structured design process and clear communication transform client relationships into lasting partnerships.',
+    image: '/blog-3.png',
+    color: 'bg-purple-100 text-purple-700',
+  },
+];
+---
+
+<section
+  id="blog"
+  class="section-py bg-[var(--color-white)] border-t border-gray-100"
+>
+  <div class="container-custom">
+    <div class="text-center mb-14">
+      <span
+        class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[var(--color-secondary)] uppercase mb-4"
+      >
+        <span class="w-2 h-2 rounded-full bg-[var(--color-secondary)]"></span>
+        Blogs
+      </span>
+      <h2
+        class="text-3xl md:text-5xl font-bold text-[var(--color-primary)] leading-tight"
+      >
+        Design Insights & Trends
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        posts.map((post) => (
+          <article class="group cursor-pointer">
+            <!-- Image -->
+            <div class="relative overflow-hidden rounded-2xl aspect-[16/10] mb-5">
+              <img
+                src={post.image}
+                alt={post.title}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+            </div>
+
+            <!-- Meta -->
+            <div class="flex items-center gap-3 mb-3">
+              <span
+                class={`text-xs font-semibold px-3 py-1 rounded-full ${post.color}`}
+              >
+                {post.category}
+              </span>
+              <span class="text-xs text-[var(--color-secondary)] font-medium">
+                {post.readTime}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-base font-bold text-[var(--color-primary)] leading-snug mb-2 group-hover:text-[var(--color-secondary)] transition-colors duration-200">
+              {post.title}
+            </h3>
+            <p class="text-sm text-[var(--color-secondary)] leading-relaxed line-clamp-2">
+              {post.excerpt}
+            </p>
+
+            <!-- Read more -->
+            <div class="mt-4 flex items-center gap-1.5 text-xs font-semibold text-[var(--color-primary)] group-hover:gap-3 transition-all duration-200">
+              Read Article
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

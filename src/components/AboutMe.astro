@@ -1,0 +1,164 @@
+---
+// About Me Section
+---
+
+<section
+  id="about"
+  class="section-py bg-[var(--color-white)] border-t border-gray-100"
+>
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <!-- Col 1: Bio Text -->
+      <div class="lg:col-span-4">
+        <span
+          class="inline-block text-xs font-semibold tracking-widest text-[var(--color-secondary)] uppercase mb-4"
+          >About Me</span
+        >
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[var(--color-primary)] leading-tight mb-6"
+        >
+          I turn ideas into elegant solutions
+        </h2>
+        <p class="text-[var(--color-secondary)] text-base leading-relaxed mb-8">
+          My reputation is turning complex problems into elegant solutions. My
+          approach blends creativity with strategic thinking to deliver designs
+          that not only look great but work seamlessly. Ready to start your next
+          project?
+        </p>
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:gap-4 transition-all duration-200"
+        >
+          Let's talk
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M7 17L17 7M17 7H7M17 7v10"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Col 2: Big Metric -->
+      <div
+        class="lg:col-span-3 flex flex-col justify-start"
+      >
+        <div
+          class="bg-[var(--color-tertiary)] rounded-2xl p-8 text-center aspect-square flex flex-col items-center justify-center"
+        >
+          <div
+            class="w-12 h-12 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center mb-6"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+          </div>
+          <p
+            class="text-6xl md:text-7xl font-bold text-[var(--color-primary)] leading-none"
+          >
+            120%
+          </p>
+          <p class="text-sm text-[var(--color-secondary)] mt-3 text-center leading-snug">
+            Average increase in client engagement in the first 6 months
+          </p>
+        </div>
+      </div>
+
+      <!-- Col 3: Portrait + Description -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+        <!-- Portrait thumbnails -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden aspect-square bg-[var(--color-tertiary)]">
+            <img
+              src="/hero-portrait.png"
+              alt="Designer at work"
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
+          <div
+            class="rounded-2xl overflow-hidden aspect-square bg-[var(--color-tertiary)] flex items-end p-4"
+          >
+            <img
+              src="/hero-portrait.png"
+              alt="Designer portrait"
+              class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500 absolute inset-0 rounded-2xl"
+            />
+            <div class="relative z-10 w-full">
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience cards -->
+        <div class="space-y-3">
+          <div
+            class="flex items-start gap-4 p-4 rounded-2xl bg-[var(--color-tertiary)] hover:bg-gray-100 transition-colors duration-200"
+          >
+            <div
+              class="w-8 h-8 rounded-full bg-[var(--color-primary)] flex items-center justify-center flex-shrink-0 mt-0.5"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-[var(--color-primary)]">
+                4+ years of experience
+              </p>
+              <p class="text-xs text-[var(--color-secondary)] mt-0.5 leading-relaxed">
+                Specializing in creating intuitive, user-focused designs that
+                blend seamless digital experiences.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-start gap-4 p-4 rounded-2xl bg-[var(--color-tertiary)] hover:bg-gray-100 transition-colors duration-200"
+          >
+            <div
+              class="w-8 h-8 rounded-full bg-[var(--color-primary)] flex items-center justify-center flex-shrink-0 mt-0.5"
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-[var(--color-primary)]">
+                Collaborative approach
+              </p>
+              <p class="text-xs text-[var(--color-secondary)] mt-0.5 leading-relaxed">
+                Working closely with clients, blending creativity with strategy
+                through thoughtful, impactful design solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

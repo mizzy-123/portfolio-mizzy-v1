@@ -1,0 +1,157 @@
+---
+// Experience / Journey Section
+const experiences = [
+  {
+    id: 1,
+    company: 'Creative Minds, New York, USA',
+    date: 'February 2020 – Present',
+    description: 'Innovated designs, New York, Generative Product Designs',
+    tags: ['UX', 'Branding'],
+    image: '/project-1.png',
+  },
+  {
+    id: 2,
+    company: 'Innovative Designs Inc, USA',
+    date: '3 February 2021 – Present',
+    description: 'Led UX, San Francisco. Crafting Subversive experiences.',
+    tags: ['UX', 'Branding'],
+    image: '/project-2.png',
+  },
+  {
+    id: 3,
+    company: 'Visionary Creations Ltd, UK',
+    date: '1 February 2021 – Present',
+    description: 'Principal Designer in Berlin. Crafting Subversive experiences.',
+    tags: ['Branding', 'UX'],
+    image: '/project-3.png',
+  },
+  {
+    id: 4,
+    company: 'FutureTech, Berlin, Germany',
+    date: 'February 2022 – Present',
+    description:
+      'From crafting seamless user experiences to leading design initiatives, each assignment has shaped my approach and deepened my passion for solving design challenges.',
+    tags: ['Branding', 'UX'],
+    image: '/project-1.png',
+    featured: true,
+  },
+  {
+    id: 5,
+    company: 'Expert Designs Inc, USA',
+    date: 'February 2023 – Present',
+    description: 'Innovated designs, New York, Tactile Product Designs',
+    tags: ['UX', 'Branding'],
+    image: '/project-2.png',
+  },
+];
+---
+
+<section
+  id="experience"
+  class="section-py bg-[var(--color-white)] border-t border-gray-100"
+>
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Left: Title -->
+      <div class="lg:col-span-4">
+        <span
+          class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[var(--color-secondary)] uppercase mb-4"
+        >
+          <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
+          Experiences
+        </span>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[var(--color-primary)] leading-tight mb-6"
+        >
+          Explore My Design Journey
+        </h2>
+        <p class="text-[var(--color-secondary)] text-sm leading-relaxed mb-8">
+          Over the past 4+ years, I've had the opportunity to work on a wide
+          range of design projects, collaborating with diverse teams and clients
+          to bring creative visions to life.
+        </p>
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[#444] transition-all duration-200"
+        >
+          Book a Call
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M7 17L17 7M17 7H7M17 7v10"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: Experience List -->
+      <div class="lg:col-span-8">
+        <div class="divide-y divide-gray-100">
+          {
+            experiences.map((exp) => (
+              <div class="group py-6 flex flex-col md:flex-row md:items-start gap-4 hover:bg-[var(--color-tertiary)] -mx-4 px-4 rounded-2xl transition-colors duration-200 cursor-pointer">
+                <!-- Date -->
+                <div class="md:w-44 flex-shrink-0">
+                  <p class="text-xs text-[var(--color-secondary)] font-medium">
+                    {exp.date}
+                  </p>
+                </div>
+
+                <!-- Content -->
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-base font-semibold text-[var(--color-primary)] mb-1">
+                    {exp.company}
+                  </h3>
+                  {exp.featured && (
+                    <div class="flex gap-3 mb-3">
+                      <img
+                        src={exp.image}
+                        alt={exp.company}
+                        class="w-16 h-12 object-cover rounded-lg flex-shrink-0"
+                      />
+                      <img
+                        src="/project-2.png"
+                        alt={exp.company}
+                        class="w-16 h-12 object-cover rounded-lg flex-shrink-0"
+                      />
+                    </div>
+                  )}
+                  <p class="text-sm text-[var(--color-secondary)] leading-relaxed">
+                    {exp.description}
+                  </p>
+                </div>
+
+                <!-- Tags + arrow -->
+                <div class="flex items-center gap-2 md:flex-col md:items-end flex-shrink-0">
+                  <div class="flex flex-wrap gap-1.5">
+                    {exp.tags.map((tag) => (
+                      <span class="text-xs font-medium px-3 py-1 rounded-full border border-[var(--color-secondary)] text-[var(--color-secondary)] group-hover:border-[var(--color-primary)] group-hover:text-[var(--color-primary)] transition-colors duration-200">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div class="w-8 h-8 rounded-full border border-gray-200 group-hover:bg-[var(--color-primary)] group-hover:border-[var(--color-primary)] group-hover:text-white text-[var(--color-secondary)] flex items-center justify-center transition-all duration-200 opacity-0 group-hover:opacity-100 mt-1">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
