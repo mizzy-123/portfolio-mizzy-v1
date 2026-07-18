@@ -1,41 +1,38 @@
 ---
-// Blog / Insights Section
-const posts = [
+// Tech Stack / Keahlian Section - Menggantikan Blog (Bahasa Indonesia)
+const techCategories = [
   {
     id: 1,
-    category: 'Design',
-    readTime: '5 min read',
-    title: 'Conducting in-depth research and usability testing',
-    excerpt:
-      'Explore how research-driven design decisions create products that truly resonate with users and drive meaningful engagement.',
-    image: '/blog-1.png',
+    category: 'Bahasa Pemrograman',
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
     color: 'bg-orange-100 text-orange-700',
+    borderColor: 'border-orange-200',
+    items: ['PHP', 'Kotlin', 'JavaScript', 'TypeScript'],
+    image: '/blog-1.png',
   },
   {
     id: 2,
-    category: 'Strategy',
-    readTime: '8 min read',
-    title: 'Designing cohesive strategies and visualizations',
-    excerpt:
-      'A deep dive into building brand systems that communicate clarity, purpose, and elegance across every touchpoint.',
-    image: '/blog-2.png',
+    category: 'Framework & Tools',
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`,
     color: 'bg-teal-100 text-teal-700',
+    borderColor: 'border-teal-200',
+    items: ['Laravel', 'Next.js', 'Astro.js', 'Express.js', 'TailwindCSS'],
+    image: '/blog-2.png',
   },
   {
     id: 3,
-    category: 'Process',
-    readTime: '6 min read',
-    title: 'Providing expert service and strategic guidance',
-    excerpt:
-      'How a structured design process and clear communication transform client relationships into lasting partnerships.',
-    image: '/blog-3.png',
+    category: 'Mobile & Database',
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
     color: 'bg-purple-100 text-purple-700',
+    borderColor: 'border-purple-200',
+    items: ['Android Native (Kotlin)', 'MySQL', 'PostgreSQL', 'MongoDB', 'Firebase', 'Supabase'],
+    image: '/blog-3.png',
   },
 ];
 ---
 
 <section
-  id="blog"
+  id="skills"
   class="section-py bg-[var(--color-white)] border-t border-gray-100"
 >
   <div class="container-custom">
@@ -44,66 +41,78 @@ const posts = [
         class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[var(--color-secondary)] uppercase mb-4"
       >
         <span class="w-2 h-2 rounded-full bg-[var(--color-secondary)]"></span>
-        Blogs
+        Keahlian
       </span>
       <h2
         class="text-3xl md:text-5xl font-bold text-[var(--color-primary)] leading-tight"
       >
-        Design Insights & Trends
+        Tech Stack & Teknologi
       </h2>
+      <p class="text-[var(--color-secondary)] text-base mt-4 max-w-xl mx-auto leading-relaxed">
+        Teknologi dan tools yang saya gunakan untuk membangun produk digital
+        yang handal, dari backend API hingga aplikasi mobile.
+      </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
-        posts.map((post) => (
-          <article class="group cursor-pointer">
+        techCategories.map((tech) => (
+          <div class="group cursor-default">
             <!-- Image -->
             <div class="relative overflow-hidden rounded-2xl aspect-[16/10] mb-5">
               <img
-                src={post.image}
-                alt={post.title}
+                src={tech.image}
+                alt={tech.category}
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300 flex items-end p-5">
+                <div set:html={tech.icon} class="text-white" />
+              </div>
             </div>
 
-            <!-- Meta -->
-            <div class="flex items-center gap-3 mb-3">
-              <span
-                class={`text-xs font-semibold px-3 py-1 rounded-full ${post.color}`}
-              >
-                {post.category}
-              </span>
-              <span class="text-xs text-[var(--color-secondary)] font-medium">
-                {post.readTime}
+            <!-- Category badge -->
+            <div class="flex items-center gap-3 mb-4">
+              <span class={`text-xs font-semibold px-3 py-1 rounded-full ${tech.color}`}>
+                {tech.category}
               </span>
             </div>
 
-            <!-- Title -->
-            <h3 class="text-base font-bold text-[var(--color-primary)] leading-snug mb-2 group-hover:text-[var(--color-secondary)] transition-colors duration-200">
-              {post.title}
-            </h3>
-            <p class="text-sm text-[var(--color-secondary)] leading-relaxed line-clamp-2">
-              {post.excerpt}
-            </p>
-
-            <!-- Read more -->
-            <div class="mt-4 flex items-center gap-1.5 text-xs font-semibold text-[var(--color-primary)] group-hover:gap-3 transition-all duration-200">
-              Read Article
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
+            <!-- Tech items -->
+            <div class="flex flex-wrap gap-2">
+              {tech.items.map((item) => (
+                <span class={`text-xs font-medium px-3 py-1.5 rounded-full border ${tech.borderColor} text-[var(--color-primary)] bg-[var(--color-tertiary)] hover:bg-gray-100 transition-colors duration-200`}>
+                  {item}
+                </span>
+              ))}
             </div>
-          </article>
+          </div>
         ))
       }
+    </div>
+
+    <!-- Sertifikasi row -->
+    <div class="mt-16 pt-10 border-t border-gray-100">
+      <h3 class="text-center text-sm font-semibold tracking-widest uppercase text-[var(--color-secondary)] mb-8">
+        Sertifikasi & Pencapaian
+      </h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        {[
+          '🥇 Gold Medal — IIIEX (MySporty App)',
+          '🏆 MIICA Special Award — IIIEX',
+          '📱 Android Intermediate — Dicoding',
+          '🤖 ML for Android — Dicoding',
+          '🗄️ Database Design — Oracle',
+          '🗄️ Database Programming — Oracle',
+          '📱 VSGA Junior Mobile Programmer — BNSP',
+          '🌐 Junior Web Programmer — BNSP',
+          '🌐 MTCNA — MikroTik Certified',
+          '📊 Big Data Analyst Associate — Solusi 247',
+        ].map((cert) => (
+          <span class="text-xs font-medium px-4 py-2 rounded-full bg-[var(--color-tertiary)] text-[var(--color-primary)] border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+            {cert}
+          </span>
+        ))}
+      </div>
     </div>
   </div>
 </section>
