@@ -48,7 +48,7 @@ export const projects: Project[] = [
     id: 4,
     title: "Maple Hss",
     description:
-      "A mobile application for booking massage therapists at Griya Bugar. Enables users to easily book available therapists and integrates with Firebase Cloud Messaging for real-time admin notifications.",
+      "Maple HSS Horeka is a comprehensive Supply Chain Management (SCM) system built to streamline and optimize operational workflows. The platform utilizes a secure multi-tenant architecture, accommodating three separate companies (PTs) within a single ecosystem while ensuring complete data isolation for each entity. Furthermore, it features a robust Role-Based Access Control (RBAC) system with dedicated modules and permissions tailored for Admins, Sales, Warehouse staff, Drivers, and Owners.",
     category: "Full-Stack",
     tags: ["Android", "Next Js", "Express Js", "MySQL"],
     image: "/portfolio/maplehss.png",
