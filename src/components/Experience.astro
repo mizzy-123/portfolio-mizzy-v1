@@ -1,44 +1,54 @@
 ---
-// Experience Section - Pengalaman Kerja Mizzy dari CV (Bahasa Indonesia)
+// Experience Section - Mizzy's real work history from CV
 const experiences = [
   {
     id: 1,
-    company: 'Campus Digital Indonesia',
-    role: 'Backend Developer (Magang)',
-    date: 'Februari 2024 – Mei 2024',
+    company: 'PT Logika Data, Semarang (Remote/WFH)',
+    role: 'Backend Developer (Internship)',
+    date: 'Desember 2025 – Present',
     description:
-      'Bekerja sebagai Backend Developer menggunakan Laravel, bertanggung jawab membangun API marketplace BelaBeli. Tugas meliputi sistem rekomendasi produk, keranjang belanja, katalog produk, manajemen produk, ulasan & rating, serta implementasi integrasi pembayaran manual menggunakan QRIS.',
-    tags: ['Laravel', 'PHP', 'API'],
-    featured: true,
+      'Spearhead the end-to-end development lifecycle across web and mobile platforms, actively translating dynamic business requirements into scalable functional features. Architect and deploy highly responsive frontend interfaces utilizing Next.js, supported by robust server-side architecture and RESTful APIs built with Express.js. Concurrently manage native Android development (Gradle), refactoring existing codebases and customizing UI/UX components with Jetpack Compose to ensure an intuitive, responsive mobile experience. Consistently maintain system stability and cross-platform performance by integrating new custom functionalities and systematically resolving complex bugs across the entire application ecosystem.',
+    tags: ['Next Js', 'Express Js', 'Android'],
+    featured: false,
   },
   {
     id: 2,
-    company: 'Serenade Story',
-    role: 'Frontend Developer (Magang)',
-    date: 'Agustus 2023 – November 2023',
+    company: 'PT Violet Global Indonesia, Semarang (Hybrid)',
+    role: 'FullStack Developer',
+    date: 'October 2025 – February 2026',
     description:
-      'Bekerja sebagai Frontend Developer, mengembangkan aplikasi Next.js. Tugas meliputi memastikan desain responsif, mengimplementasikan desain dari Figma, menerapkan pagination untuk artikel, dan menyempurnakan fitur chat.',
-    tags: ['Next.js', 'React', 'Figma'],
+      'Engineered scalable RESTful APIs utilizing Django (Python) to support high-performance frontend interactions and ensure seamless data flow. Optimized system architecture by implementing asynchronous background processing with Celery to manage intensive file uploads, significantly reducing server response times and elevating the overall user experience. Additionally, developed a robust document management system featuring secure storage handling and automated deletion workflows to maximize database capacity and overall storage efficiency.',
+    tags: ['Django', 'Python'],
     featured: false,
   },
   {
     id: 3,
-    company: 'Bangkit Academy (Google, GoTo, Traveloka)',
-    role: 'Android Developer Cohort',
-    date: 'Februari 2024 – Juli 2024',
+    company: "Campus Digital Indonesia",
+    role: "Backend Developer (Internship)",
+    date: "February 2024 – May 2024",
     description:
-      'Mempelajari materi terkait pengembangan aplikasi Android menggunakan Kotlin dan Android Studio. Mengimplementasikan model machine learning menggunakan TFLite, menggunakan library ML Kit, dan berkolaborasi dengan tim untuk mengembangkan aplikasi Android berdasarkan studi kasus yang diberikan.',
-    tags: ['Kotlin', 'Android', 'ML Kit'],
+      "Worked as a Backend Developer using Laravel, responsible for building the BelaBeli marketplace API. Tasks included developing the product recommendation system, shopping cart, product catalog, product management, ratings and reviews, as well as implementing manual payment integration using QRIS.",
+    tags: ["Laravel", "PHP", "API"],
     featured: false,
   },
   {
     id: 4,
-    company: 'Politeknik Negeri Semarang',
-    role: 'Mahasiswa — D4 Teknik Informatika Terapan',
-    date: 'September 2021 – September 2025',
+    company: "Serenade Story",
+    role: "Frontend Developer (Internship)",
+    date: "August 2023 – November 2023",
     description:
-      'Menempuh pendidikan D4 Teknik Informatika Terapan dengan IPK Kumulatif 3.84/4.0. Mata kuliah relevan: Pemrograman Berorientasi Objek, Struktur Data, Desain Database, Pemrograman Mobile, dan Pengembangan Web Berbasis Framework.',
-    tags: ['Akademik', 'IPK 3.84'],
+      "Worked as a Frontend Developer, developing a Next.js application. Tasks included ensuring responsive design, implementing designs from Figma, implementing pagination for articles, and refining the chat feature.",
+    tags: ["Next.js", "React", "Figma"],
+    featured: false,
+  },
+  {
+    id: 5,
+    company: "Bangkit Academy (Google, GoTo, Traveloka)",
+    role: "Android Developer Cohort",
+    date: "February 2024 – July 2024",
+    description:
+      "Studied Android application development using Kotlin and Android Studio. Implemented a machine learning model using TFLite, learned to use ML Kit, and collaborated with a team to develop Android applications based on given case studies.",
+    tags: ["Kotlin", "Android", "ML Kit"],
     featured: false,
   },
 ];
@@ -56,23 +66,23 @@ const experiences = [
           class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[var(--color-secondary)] uppercase mb-4"
         >
           <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
-          Pengalaman
+          Experience
         </span>
         <h2
           class="text-3xl md:text-4xl font-bold text-[var(--color-primary)] leading-tight mb-6"
         >
-          Perjalanan Karir & Pendidikan Saya
+          My Career & My Journey
         </h2>
         <p class="text-[var(--color-secondary)] text-sm leading-relaxed mb-8">
-          Selama perjalanan sebagai developer, saya telah berkesempatan bekerja
-          pada berbagai proyek nyata — dari membangun API marketplace, aplikasi
-          Android bertenaga ML, hingga frontend berbasis Next.js.
+          Throughout my journey as a developer, I've had the opportunity to work
+          on real-world projects — from building marketplace APIs and
+          ML-powered Android apps to Next.js frontends.
         </p>
         <a
           href="#contact"
           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[#444] transition-all duration-200"
         >
-          Hubungi Saya
+          Contact Me
           <svg
             width="14"
             height="14"

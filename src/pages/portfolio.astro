@@ -2,115 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import { projects, categoryColors } from '../data/projects';
 
-// Template proyek — isi sendiri sesuai kebutuhan
-const projects = [
-  {
-    id: 1,
-    title: 'MySporty Application',
-    description:
-      'Aplikasi olahraga yang secara otomatis melacak gerakan latihan menggunakan kamera perangkat. Dibangun dengan Android Jetpack Compose (Kotlin), terintegrasi dengan Supabase untuk penyimpanan data, dan TensorFlow Lite untuk model machine learning.',
-    category: 'Android',
-    tags: ['Kotlin', 'Jetpack Compose', 'TFLite', 'Supabase'],
-    image: '/project-1.png',
-    highlight: true,
-    award: '🥇 Gold Medal IIIEX',
-  },
-  {
-    id: 2,
-    title: 'BelaBeli Marketplace API',
-    description:
-      'Backend marketplace menggunakan Laravel. Fitur meliputi sistem rekomendasi produk, keranjang belanja, katalog produk, manajemen produk, ulasan & rating, serta integrasi pembayaran QRIS.',
-    category: 'Backend',
-    tags: ['Laravel', 'PHP', 'MySQL', 'QRIS'],
-    image: '/project-2.png',
-    highlight: false,
-  },
-  {
-    id: 3,
-    title: 'NSMHC — Nursing Student Motherheart Connection',
-    description:
-      'Platform pelatihan untuk membantu ibu berlatih teknik mindfulness dan manajemen emosional. Saya berperan sebagai Backend Developer menggunakan Laravel, membangun API untuk aplikasi mobile dan web dashboard.',
-    category: 'Backend',
-    tags: ['Laravel', 'PHP', 'API', 'Mobile'],
-    image: '/project-3.png',
-    highlight: false,
-  },
-  {
-    id: 4,
-    title: 'House Shiatsu & Spa App',
-    description:
-      'Aplikasi mobile untuk pemesanan terapis pijat di Griya Bugar. Memungkinkan pengguna memesan terapis dan terintegrasi dengan Firebase Cloud Messaging untuk notifikasi real-time ke admin.',
-    category: 'Android',
-    tags: ['Android', 'Kotlin', 'Firebase', 'FCM'],
-    image: '/project-1.png',
-    highlight: false,
-  },
-  {
-    id: 5,
-    title: 'Sistem Manajemen Unit Kegiatan Mahasiswa',
-    description:
-      'Sistem informasi untuk Unit Kegiatan Mahasiswa menggunakan Laravel (backend) dan Next.js (frontend). Fitur: role user (Admin, User, Super Admin), penjadwalan tugas, jadwal rapat, daftar anggota, formulir pendaftaran, dan verifikasi email.',
-    category: 'Full-Stack',
-    tags: ['Laravel', 'Next.js', 'MySQL', 'Auth'],
-    image: '/project-2.png',
-    highlight: false,
-  },
-  {
-    id: 6,
-    title: 'Nutrient — Nutrition Table Assistant',
-    description:
-      'Aplikasi Android untuk memindai label nutrisi makanan dan mengubahnya menjadi informasi berguna berdasarkan BMI pengguna. Bertemakan Health Innovation untuk komunitas rentan.',
-    category: 'Android',
-    tags: ['Android', 'Kotlin', 'ML', 'Health'],
-    image: '/project-3.png',
-    highlight: false,
-  },
-  {
-    id: 7,
-    title: 'Fitrack Mobile Apps',
-    description:
-      'Aplikasi mobile untuk memantau kesehatan fisik. Membantu pengguna menjaga kebugaran dengan pelacakan komprehensif aktivitas harian dan asupan makanan. Saya berperan sebagai Backend Developer.',
-    category: 'Backend',
-    tags: ['API', 'Laravel', 'Mobile', 'Health'],
-    image: '/project-1.png',
-    highlight: false,
-  },
-  {
-    id: 8,
-    title: 'Serenade Story — Wedding Organizer Website',
-    description:
-      'Website Wedding Organizer yang dibangun dengan Next.js. Tugas meliputi implementasi desain responsif dari Figma, pagination artikel, dan penyempurnaan fitur chat.',
-    category: 'Frontend',
-    tags: ['Next.js', 'React', 'Figma', 'TailwindCSS'],
-    image: '/project-2.png',
-    highlight: false,
-  },
-  {
-    id: 9,
-    title: 'E-commerce Buah & Produk Segar',
-    description:
-      'Website e-commerce berbasis Laravel untuk penjualan buah dan produk lainnya. Fitur: WhatsApp Gateway untuk konfirmasi pesanan, invoice, keranjang belanja, dan keamanan akun (email verification & password recovery).',
-    category: 'Full-Stack',
-    tags: ['Laravel', 'PHP', 'WhatsApp API', 'MySQL'],
-    image: '/project-3.png',
-    highlight: false,
-  },
-];
-
-const categoryColors: Record<string, string> = {
-  Android: 'bg-green-100 text-green-700',
-  Backend: 'bg-blue-100 text-blue-700',
-  Frontend: 'bg-orange-100 text-orange-700',
-  'Full-Stack': 'bg-purple-100 text-purple-700',
-};
-
-const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
+const categories = ['All', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
 ---
 
 <Layout
-  title="Portofolio — Muhammad Mizzy | Full-Stack Developer"
-  description="Semua proyek dan karya Muhammad Mizzy — Full-Stack Developer, Android Developer, dan Backend Developer."
+  title="Portfolio — Muhammad Mizzy | Full-Stack Developer"
+  description="All projects and works by Muhammad Mizzy — Full-Stack Developer, Android Developer, and Backend Developer."
 >
   <Navbar />
 
@@ -126,21 +25,20 @@ const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M19 12H5M5 12l7 7M5 12l7-7"></path>
             </svg>
-            Kembali ke Beranda
+            Back to Home
           </a>
-          <span
+          <!-- <span
             class="inline-block text-xs font-semibold tracking-widest text-[var(--color-secondary)] uppercase mb-4"
-            >Portofolio</span
-          >
+            >Portfolio</span
+          > -->
           <h1
             class="text-4xl md:text-6xl font-bold text-[var(--color-primary)] leading-tight mb-6"
           >
-            Semua Proyek Saya
+            All My Projects
           </h1>
           <p class="text-[var(--color-secondary)] text-base leading-relaxed">
-            Kumpulan proyek yang telah saya kerjakan — dari aplikasi Android bertenaga
-            machine learning, REST API, hingga website full-stack. Template ini bisa
-            kamu isi dengan proyek-proyekmu sendiri.
+            A collection of projects I have worked on — from ML-powered Android apps and
+            REST APIs to full-stack websites. Edit <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded font-mono">src/data/projects.ts</code> to update all projects at once.
           </p>
         </div>
       </div>
@@ -156,7 +54,7 @@ const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
               <button
                 data-category={cat}
                 class={`filter-btn text-xs font-semibold px-4 py-2 rounded-full border transition-all duration-200 ${
-                  cat === 'Semua'
+                  cat === 'All'
                     ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]'
                     : 'border-gray-200 text-[var(--color-secondary)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]'
                 }`}
@@ -174,8 +72,11 @@ const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
         >
           {
             projects.map((project) => (
-              <article
-                class="group cursor-pointer project-card"
+              <a
+                href={project.link || '#'}
+                target={project.link && project.link !== '#' ? '_blank' : '_self'}
+                rel="noopener noreferrer"
+                class="group cursor-pointer project-card no-underline block"
                 data-category={project.category}
               >
                 <!-- Image -->
@@ -196,7 +97,9 @@ const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
                   <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                     <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
                       </svg>
                     </div>
                   </div>
@@ -225,7 +128,7 @@ const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
                     </span>
                   ))}
                 </div>
-              </article>
+              </a>
             ))
           }
         </div>
@@ -243,7 +146,7 @@ const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      const category = btn.dataset.category || 'Semua';
+      const category = btn.dataset.category || 'All';
 
       // Update active button
       filterBtns.forEach((b) => {
@@ -255,7 +158,7 @@ const categories = ['Semua', 'Android', 'Backend', 'Frontend', 'Full-Stack'];
 
       // Filter cards
       projectCards.forEach((card) => {
-        if (category === 'Semua' || card.dataset.category === category) {
+        if (category === 'All' || card.dataset.category === category) {
           card.style.display = '';
           card.style.animation = 'fadeIn 0.3s ease forwards';
         } else {

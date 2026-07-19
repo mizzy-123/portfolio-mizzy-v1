@@ -1,0 +1,73 @@
+const projects = [
+  {
+    id: 1,
+    title: "MySporty Application",
+    category: "Android Development",
+    image: "/project-1.png",
+    tag: "Android",
+  },
+  {
+    id: 2,
+    title: "BelaBeli Marketplace API",
+    category: "Backend Development",
+    image: "/project-2.png",
+    tag: "Backend",
+  },
+  {
+    id: 3,
+    title: "Student Activity Unit System",
+    category: "Full-Stack Development",
+    image: "/project-3.png",
+    tag: "Full-Stack",
+  },
+  {
+    id: 4,
+    title: "Serenade Story Website",
+    category: "Frontend Development",
+    image: "/project-1.png",
+    tag: "Frontend",
+  },
+];
+
+const experiences = [
+  {
+    id: 1,
+    company: "Campus Digital Indonesia",
+    role: "Backend Developer (Internship)",
+    date: "February 2024 – May 2024",
+    description:
+      "Worked as a Backend Developer using Laravel, responsible for building the BelaBeli marketplace API. Tasks included developing the product recommendation system, shopping cart, product catalog, product management, ratings and reviews, as well as implementing manual payment integration using QRIS.",
+    tags: ["Laravel", "PHP", "API"],
+    featured: false,
+  },
+  {
+    id: 2,
+    company: "Serenade Story",
+    role: "Frontend Developer (Internship)",
+    date: "August 2023 – November 2023",
+    description:
+      "Worked as a Frontend Developer, developing a Next.js application. Tasks included ensuring responsive design, implementing designs from Figma, implementing pagination for articles, and refining the chat feature.",
+    tags: ["Next.js", "React", "Figma"],
+    featured: false,
+  },
+  {
+    id: 3,
+    company: "Bangkit Academy (Google, GoTo, Traveloka)",
+    role: "Android Developer Cohort",
+    date: "February 2024 – July 2024",
+    description:
+      "Studied Android application development using Kotlin and Android Studio. Implemented a machine learning model using TFLite, learned to use ML Kit, and collaborated with a team to develop Android applications based on given case studies.",
+    tags: ["Kotlin", "Android", "ML Kit"],
+    featured: false,
+  },
+  {
+    id: 4,
+    company: "Politeknik Negeri Semarang",
+    role: "Student — D4 Applied Informatics Engineering",
+    date: "September 2021 – September 2025",
+    description:
+      "Pursuing a D4 degree in Applied Informatics Engineering with a Cumulative GPA of 3.84/4.0. Relevant coursework: Object-oriented Programming, Data Structures, Database Design, Mobile Programming, and Framework-based Web Development.",
+    tags: ["Academic", "GPA 3.84"],
+    featured: false,
+  },
+];
