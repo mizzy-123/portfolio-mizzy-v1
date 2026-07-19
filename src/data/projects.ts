@@ -78,7 +78,7 @@ export const projects: Project[] = [
     id: 7,
     title: "PT Karya Solusi Prima Sejahtera",
     description:
-      "A mobile application for monitoring physical health, helping users maintain fitness through comprehensive tracking of daily activities and dietary intake. Served as Backend Developer, building and managing APIs.",
+      "The PT. Karya Solusi Prima Sejahtera (KSPS) website is a professional, 5-page corporate company profile. I executed the technical web design and landing page implementation by integrating WordPress as a robust Content Management System (CMS) with Tailwind CSS for styling. This approach ensures a highly customized, responsive, and modern user interface that effectively highlights the company's corporate identity and services.",
     category: "Frontend",
     tags: ["Wordpress", "Tailwindcss", "PHP"],
     image: "/portfolio/ksps.png",
