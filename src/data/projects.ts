@@ -27,6 +27,15 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: "Gemilang DPMPTSP Semarang",
+    description: `The PPID DKP website is the official Public Information and Documentation Officer (PPID) platform for the Central Java Marine and Fisheries Service. This website is designed to provide transparent, accurate, and easily accessible public information to the community. It features an Information Request system for users to obtain specific data, an Objection Form for information request disputes, and a Civil Servant (ASN) Complaint Form to report any administrative violations. Additionally, the platform includes a News Portal for the latest updates and an Activity Gallery showcasing documentations of events, outreach programs, and key moments related to public information disclosure. Through this platform, the public can actively observe PPID's role as a reliable provider and manager of public information.`,
+    category: "Full-Stack",
+    tags: ["Next Js", "Nest Js", "MySQL", "Tailwindcss", "Typescript", "Android Jetpack Compose", "Kotlin"],
+    image: "/portfolio/gemilang.png",
+    link: "https://devgemilang.semarangkota.go.id/",
+  },
+  {
+    id: 3,
     title: "PPID DKP Jateng",
     description: `The PPID DKP website is the official Public Information and Documentation Officer (PPID) platform for the Central Java Marine and Fisheries Service. This website is designed to provide transparent, accurate, and easily accessible public information to the community. It features an Information Request system for users to obtain specific data, an Objection Form for information request disputes, and a Civil Servant (ASN) Complaint Form to report any administrative violations. Additionally, the platform includes a News Portal for the latest updates and an Activity Gallery showcasing documentations of events, outreach programs, and key moments related to public information disclosure. Through this platform, the public can actively observe PPID's role as a reliable provider and manager of public information.`,
     category: "Full-Stack",
@@ -35,7 +44,7 @@ export const projects: Project[] = [
     link: "https://ppid.dkp.jatengprov.go.id/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Meyoi Makeup",
     description:
       "Meyoi Makeup is a video face-editing application designed for virtual makeup simulation. It allows users to apply and experiment with various digital makeup enhancements directly on their videos, featuring customizable tools for eyebrows, cheek blush, lipstick, and more.",
@@ -45,7 +54,7 @@ export const projects: Project[] = [
     link: "https://play.google.com/store/apps/details?id=com.meyoi.meyoiapp",
   },
   {
-    id: 4,
+    id: 5,
     title: "Maple Hss",
     description:
       "Maple HSS Horeka is a comprehensive Supply Chain Management (SCM) system built to streamline and optimize operational workflows. The platform utilizes a secure multi-tenant architecture, accommodating three separate companies (PTs) within a single ecosystem while ensuring complete data isolation for each entity. Furthermore, it features a robust Role-Based Access Control (RBAC) system with dedicated modules and permissions tailored for Admins, Sales, Warehouse staff, Drivers, and Owners.",
@@ -55,7 +64,7 @@ export const projects: Project[] = [
     link: "https://maplehss.com/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Omah Lestari",
     description:
       "Oemah Lestari Marketplace is a platform that connects residents, landowners, and property developers within a single, integrated residential ecosystem.",
@@ -65,7 +74,7 @@ export const projects: Project[] = [
     link: "https://www.oemahlestari.com/home",
   },
   {
-    id: 6,
+    id: 7,
     title: "Jamur Cikuda",
     description:
       "The Jamur Cikuda Nusantara website is a professional company profile platform designed to establish the brand's digital presence. It showcases the company's background, core agribusiness operations, and product offerings, providing clear and accessible information for potential clients and partners.",
@@ -75,7 +84,7 @@ export const projects: Project[] = [
     link: "https://jamurcikuda.co.id/",
   },
   {
-    id: 7,
+    id: 8,
     title: "PT Karya Solusi Prima Sejahtera",
     description:
       "The PT. Karya Solusi Prima Sejahtera (KSPS) website is a professional, 5-page corporate company profile. I executed the technical web design and landing page implementation by integrating WordPress as a robust Content Management System (CMS) with Tailwind CSS for styling. This approach ensures a highly customized, responsive, and modern user interface that effectively highlights the company's corporate identity and services.",
@@ -85,7 +94,7 @@ export const projects: Project[] = [
     link: "https://ksps.co.id/",
   },
   {
-    id: 8,
+    id: 9,
     title: "Loyalcust",
     description:
       "As the Front End Developer, I was responsible for building the user interface of a web-based Customer Relationship Management (CRM) platform. Operating on a Software as a Service (SaaS) model, this system is designed to efficiently manage and streamline online customer interactions. My focus was on delivering a responsive, intuitive, and modern web experience to ensure seamless user operations.",
@@ -95,7 +104,7 @@ export const projects: Project[] = [
     link: "https://loyalcust.campus.co.id/home",
   },
   {
-    id: 9,
+    id: 10,
     title: "NSMHC — Nursing Student Motherheart Connection",
     description:
       "A training platform to help mothers practice mindfulness and emotional management techniques. Served as Backend Developer using Laravel, building APIs for both the mobile application and web dashboard.",
@@ -105,7 +114,7 @@ export const projects: Project[] = [
     link: "#",
   },
   {
-    id: 10,
+    id: 11,
     title: "Smartgrid PT Alga Bioteknologi Indonesia",
     description:
       "The Smartgrid PT Alga Bioteknologi Indonesia is an application designed for efficient energy management. It enables users to monitor real-time power consumption and configure future energy allocation, ensuring optimal and controlled power usage across operations.",
@@ -115,7 +124,7 @@ export const projects: Project[] = [
     link: "#",
   },
   {
-    id: 10,
+    id: 12,
     title: "Griyabugar",
     description:
       "The Griya Bugar House Shiatsu and SPA app is a dedicated booking platform designed to streamline reservations for wellness treatments. It allows customers to easily browse, schedule, and book their preferred massage and spa sessions at Griya Bugar, providing a seamless and convenient user experience.",
